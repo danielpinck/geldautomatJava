@@ -1,19 +1,11 @@
 package geldautomat;
 
-import java.util.ArrayList;
+import java.io.IOException;
 
 public class Programm {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Geldautomat geldautomat = new Geldautomat(1000000, "Uhrzeit", "Haspa");
-        int kunde = geldautomat.ausgabeKunde(123);
-        System.out.println(geldautomat.auszahlung(kunde));
-
-
-
-
-
-
-
-
+        Kunde kunde = geldautomat.ausgabeKunde(geldautomat.login());
+        geldautomat.abheben(kunde);
     }
 }
