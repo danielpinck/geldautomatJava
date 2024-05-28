@@ -75,6 +75,7 @@ public class Geldautomat {
         int abheben = 30;
         kontostand = kontostand - abheben;
         return kontostand;
+        // änderung
 
 
 
